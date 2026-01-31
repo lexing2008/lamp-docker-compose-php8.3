@@ -1,4 +1,6 @@
 /vendor/
+/volumes/
+/www/
 node_modules/
 npm-debug.log
 yarn-error.log
