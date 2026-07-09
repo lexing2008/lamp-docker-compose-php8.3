@@ -24,7 +24,7 @@ RUN apt-get install -y default-mysql-client
 
 # установка расширения DB
 RUN docker-php-ext-install pdo pdo_mysql mysqli xml
-RUN docker-php-ext-install dom
+RUN docker-php-ext-install dom xmlwriter
 
 # install php GD
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ && docker-php-ext-install gd \
