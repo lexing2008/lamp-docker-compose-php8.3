@@ -37,8 +37,20 @@ docker compose exec apachephp bash
 ```
 docker compose logs <имя контейнера>
 docker compose logs imgproxy 
+docker compose logs apachephp
 ```
 Остановить, пересобрать и запустить контейнеры
 ```
 docker compose down && docker compose build && docker compose up -d
+```
+
+Run migrations
+```
+docker compose exec apachephp php artisan migrate
+```
+
+Изменить владельца папок и файлов
+```
+sudo chown -R $USER:$USER ./www
+sudo chmod -R 755 ./www
 ```
